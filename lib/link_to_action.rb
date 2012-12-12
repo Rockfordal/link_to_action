@@ -54,6 +54,9 @@ module LinkToAction
   mattr_accessor :class_edit
   @@class_edit = nil
 
+  mattr_accessor :class_show
+  @@class_show = nil
+
   mattr_accessor :class_destroy
   @@class_destroy = 'btn-danger'
 
