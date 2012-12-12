@@ -43,6 +43,8 @@ module LinkToAction::Helpers
     raw = options.delete(:raw)
     send = options.delete(:send)
     i18n = options.delete(:i18n)
+    options[:class] = LinkToAction::Utils.action_class('show', options)
+
     unless name or i18n
       method = raw || send ||
         LinkToAction.show_methods.find { |m| object.respond_to?(m) }
