@@ -39,7 +39,7 @@ module LinkToAction::Helpers
   end
 
   def link_to_show(object, options = {})
-    name = options.delete(:name)
+    name = options.delete(:name) || LinkToAction::Utils.t_action(object, 'show')
     raw = options.delete(:raw)
     send = options.delete(:send)
     i18n = options.delete(:i18n)
